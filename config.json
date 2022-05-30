@@ -20,7 +20,7 @@
             "USER": "",
             "PASSWORD": "",
             "DATABASE": "",
-            "DIALECT": "",
+            "DIALECT": "postgres",
             "POOL": {
                 "MAX": 5,
                 "MIN": 0,

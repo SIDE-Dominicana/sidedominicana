@@ -3,14 +3,12 @@ const { DataTypes } = require('sequelize');
 function model(sequelize) {
     const attributes = {
         subscriberId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-        // UserTypeId: { type: DataTypes.INTEGER, autoIncrement: true, foreignKey: true },
-        // RolID: {},
-        // SystemID: {},
         firstName: { type: DataTypes.STRING, allowNull: false },
         lastName: { type: DataTypes.STRING, allowNull: false },
         userName: { type: DataTypes.STRING, allowNull: false, unique: true },
         email: { type: DataTypes.STRING, allowNull: false, unique: true },
-        password: { type: DataTypes.STRING, allowNull: false },        
+        password: { type: DataTypes.STRING, allowNull: false },
+        position: { type: DataTypes.STRING, allowNull: false },
         status: { type: DataTypes.BOOLEAN },
         subscriptionDate: { type: DataTypes.DATE, allowNull: false }
     };
@@ -22,11 +20,11 @@ function model(sequelize) {
         },
         scopes: {
             // include hash with this scope
-            withHash: { attributes: {}, }
+            withHash: { attributes: {} }
         }
     };
 
-    return sequelize.define('subscribers', attributes, options);
+    return sequelize.define('Subscribers', attributes, options);
 }
 
 module.exports = model;
