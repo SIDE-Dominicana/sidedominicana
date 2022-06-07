@@ -1,8 +1,8 @@
 const db = require('../config/db.config');
-const config = require('../../config.json');
+const config = require('../config/app.config');
 const crypto = require('crypto');
-const secret = config.JWT.SECRETKEY;
-const iv = Buffer.from(config.JWT.IV, 'hex');
+const secret = config.JWT_SECRETKEY;
+const iv = Buffer.from(config.JWT_IV, 'hex');
 const algorithm = "aes-256-cbc"; 
 const encrypts = require('../helper/encrypt');
 

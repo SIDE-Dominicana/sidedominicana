@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const config = require('../../config.json')
+const config = require('../config/app.config')
 const service = require('../services/auth.services');
 
 exports.login = async function(req, res) {
@@ -17,7 +17,7 @@ exports.login = async function(req, res) {
 
         if (!User.status) return res.status(500).json({ message: "Usuario inactivo" });
 
-        const token = jwt.sign({ user: User.userName, rol: User.rol }, config.JWT.TOKEN_SECRET, { expiresIn: config.JWT.EXPIRES_TIME });
+        const token = jwt.sign({ user: User.userName, rol: User.rol }, config.JWT_TOKEN_SECRET, { expiresIn: config.JWT_EXPIRES_TIME });
 
         return res.status(200).json({ user: User, token: token });
         

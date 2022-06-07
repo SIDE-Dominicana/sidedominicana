@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const config = require('../../config.json');
+const config = require('../config/app.config');
 const service = require('../services/subscribers.services');
 
 exports.getAll = async function(req, res) {
@@ -9,7 +9,7 @@ exports.getAll = async function(req, res) {
     
         if (token == null) return res.status(403).json({ message: "No token provided!"});
 
-        const verified = jwt.verify(token, config.JWT.TOKEN_SECRET);
+        const verified = jwt.verify(token, config.JWT_TOKEN_SECRET);
 
         console.log(verified);
 

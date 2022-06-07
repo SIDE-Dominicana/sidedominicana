@@ -1,15 +1,14 @@
 const db = require('../src/config/db.config');
-require("dotenv").config();
 const cors = require('cors');
 const express = require("express");
 const bodyparser = require('body-parser');
 
 const app = express();
 
-// accessible to any
+// Accessible to any
 app.use(cors());
 
-// database
+// Database synchronization
 db.sequelize.sync().then(() => {
     console.log("Database Synced Successfully");
     // initial();

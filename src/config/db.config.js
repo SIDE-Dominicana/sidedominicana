@@ -1,16 +1,21 @@
-const variables = require('../../config.json');
-const config = variables.DATABASE.DEVELOPMENT;
+const config = require("../config/app.config");
 const Sequelize = require("sequelize");
+const pool = {
+  max: 5,
+  min: 0,
+  acquire: 30000,
+  idle: 10000
+}
 
 const sequelize = new Sequelize(config.DATABASE, config.USER, config.PASSWORD, {
   host: config.HOST,
   dialect: config.DIALECT,
   operatorsAliases: false,
   pool: {
-    max: config.POOL.MAX,
-    min: config.POOL.MIN,
-    acquire: config.POOL.ACQUIRE,
-    idle: config.POOL.IDLE
+    max: pool.max,
+    min: pool.min,
+    acquire: pool.acquire,
+    idle: pool.idle
   }
 });
  
