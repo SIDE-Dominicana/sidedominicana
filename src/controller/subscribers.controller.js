@@ -11,8 +11,6 @@ exports.getAll = async function(req, res) {
 
         const verified = jwt.verify(token, config.JWT_TOKEN_SECRET);
 
-        console.log(verified);
-
         const subscribers = await service._getAll(); 
 
         return res.status(200).json(subscribers);
@@ -21,7 +19,7 @@ exports.getAll = async function(req, res) {
 
         return res.status(500).json({ message: "Acceso Denegado", error: error });        
     
-    }        
+    }
 };
 
 exports.getById = async function(req, res) {
