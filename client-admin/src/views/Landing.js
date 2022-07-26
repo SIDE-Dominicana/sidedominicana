@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import brand from '../assets/img/IMG-20210302-WA0016.jpg';
 
 // components
 
@@ -16,7 +17,7 @@ export default function Landing() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
+                `url(${brand})`,
             }}
           >
             <span
