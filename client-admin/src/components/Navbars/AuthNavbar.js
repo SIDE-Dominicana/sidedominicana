@@ -1,90 +1,111 @@
-/*eslint-disable*/
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // components
-
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
+import TranslationDropdown from "components/Dropdowns/TranslationDropdown";
+
+// import translations from '../../i18n/index.js';
+// import LanguageContext from "i18n/LanguageContext.js";
+
+// let spanish = 'english';
+// let language = navigator.language || navigator.userLanguage
+// if (!spanish.includes(language)) {
+// 	language = 'español'
+// }
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  // const [lng, setLng] = useState(language);
+
   return (
-    <>
+    // <LanguageContext.Provider value={lng} >
+      <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link
-              className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-              to="/"
+          <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+              <Link
+                className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+                to="/"
+              >
+                Servicios Integrados de Desarrollo Empresarial
+              </Link>
+              <button
+                className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                type="button"
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
+                <i className="text-white fas fa-bars"></i>
+              </button>
+            </div>
+            <div
+              className={
+                "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
+                (navbarOpen ? " block rounded shadow-lg" : " hidden")
+              }
+              id="example-navbar-warning"
             >
-              Servicios Integrados de Desarrollo Empresarial
-            </Link>
-            <button
-              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              <i className="text-white fas fa-bars"></i>
-            </button>
+              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                <li className="flex items-center">
+                  <PagesDropdown />
+                </li>
+                <li className="flex items-center">
+                  <a
+                    className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    href="https://www.facebook.com/profile.php?id=100069438498408"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " />
+                    <span className="lg:hidden inline-block ml-2">Facebook</span>
+                  </a>
+                </li>
+
+                <li className="flex items-center">
+                  <a
+                    className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    href="https://twitter.com/sidedominicana"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg " />
+                    <span className="lg:hidden inline-block ml-2">Twitter</span>
+                  </a>
+                </li>
+
+                <li className="flex items-center">
+                  <a
+                    className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    href="https://www.instagram.com/sidedominicana/"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram text-lg leading-lg " />
+                    <span className="lg:hidden inline-block ml-2">Instagram</span>
+                  </a>
+                </li>
+
+                <li className="flex items-center">
+                  <a
+                    className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    href="https://www.linkedin.com/in/servicios-integrados-de-desarrollo-empresarial-side-5b63941b8/"
+                    target="_blank" rel="noreferrer"
+                  >
+                    <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-linkedin text-lg leading-lg " />
+                    <span className="lg:hidden inline-block ml-2">Linkedin</span>
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <TranslationDropdown />
+                  {/* <button onClick={() => setLng('english')}>
+                    {translations[lng]['english']}
+                  </button>
+                  <button onClick={() => setLng('español')}>
+                    {translations[lng]['spanish']}
+                  </button> */}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
-              (navbarOpen ? " block rounded shadow-lg" : " hidden")
-            }
-            id="example-navbar-warning"
-          >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                <PagesDropdown />
-              </li>
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/profile.php?id=100069438498408"
-                  target="_blank"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Facebook</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://twitter.com/sidedominicana"
-                  target="_blank"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Twitter</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.instagram.com/sidedominicana/"
-                  target="_blank"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Instagram</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.linkedin.com/in/servicios-integrados-de-desarrollo-empresarial-side-5b63941b8/"
-                  target="_blank"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-linkedin text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Linkedin</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+        </nav>      
+      </>  
+    // </LanguageContext.Provider>
   );
 }

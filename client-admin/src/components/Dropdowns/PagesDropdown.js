@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
+
+// import translations from '../../i18n/index.js';
+// import LanguageContext from "i18n/LanguageContext.js";
 
 const PagesDropdown = () => {
   // dropdown props
@@ -16,7 +19,8 @@ const PagesDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-  return (
+  // const lng = useContext(LanguageContext)
+  return (    
     <>
       <a
         className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -27,7 +31,7 @@ const PagesDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        Menu
+        {/* {translations[lng]['menu']} */}
       </a>
       <div
         ref={popoverDropdownRef}
@@ -36,20 +40,13 @@ const PagesDropdown = () => {
           "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
         }
       >
-        {/* <span
-          className={
-            "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
-          }
-        >
-          Admin Layout
-        </span> */}
         <Link
           to="/"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Servicios
+          {/* {translations[lng]['services']} */}
         </Link>
         <Link
           to="/"
@@ -57,30 +54,14 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Paquetes
+          {/* {translations[lng]['packages']} */}
         </Link>
-        {/* <Link
-          to="/admin/tables"
-          className={
-            "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-          }
-        >
-          Tables
-        </Link> */}
-        {/* <Link
-          to="/admin/maps"
-          className={
-            "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-          }
-        >
-          Maps
-        </Link> */}
        <span
           className={
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
           }
         >
-          Side App
+          {/* {translations[lng]['side.app']} */}
         </span>
         <Link
           to="/auth/login"
@@ -88,7 +69,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Ingresar
+          {/* {translations[lng]['login']} */}
         </Link>
         <Link
           to="/auth/register"
@@ -96,7 +77,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Registrarse
+          {/* {translations[lng]['register']} */}
         </Link>
       </div>
     </>
