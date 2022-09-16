@@ -1,0 +1,77 @@
+{
+    "message": {
+        "success-message" : "Send",
+        "error-message" : "",
+        "success" : "Successfully",
+        "error" : "Error",
+        "info" : "Information"
+    },
+    "navbar" : {
+        "menu" : "Menu",
+        "home" : "Home",
+        "side.app" : "Side App",
+        "login" : "Login",
+        "register" : "Register",
+        "packages" : "Packages",
+        "services" : "Services",
+        "english": "English",
+        "spanish": "Spanish",
+        "name" : "Integrated Business Development Services"
+    },
+    "landing" : {
+        "title" : "Your story begins with us.",
+        "intro" : "We are a team of enterprising professionals, with experience in diverse areas, who form a broad directory of services with the purpose of accompanying Entrepreneurs and MiPymes in the development of their business objectives; strengthening each process with the best solutions in Administrative, Financial, Technological and Legal aspects.",        
+        "title-mission" : "Mission",
+        "mission" : "Accompany our clients in the development of their operational activities, providing them with the tools that allow them to meet the entity's objectives, offering a quality professional service.",
+        "title-committed": "Committed",
+        "committed": "For having the highest standards for MiPYMES (Micro, Small and Medium Enterprises), which deserve our support from start to finish in their projects.",
+        "title-vision" : "Vision",
+        "vision" : "To be part of each stage and process of our clients, on the road to their development, committed to their evolution and growth.",
+        "title-work-with-us" : "Working with us is a pleasure",
+        "work-with-us-part-1" : "For MiPYMES (Micro, Small and Medium Enterprises) the most recommended and used commercial companies in the country are the Limited Liability Companies and the Individual Limited Liability Companies (companies of only owner), which have flexible participation requirements at the time of being constituted.",
+        "work-with-us-part-2" : "What should you take into account when formalizing as a company? If it is not your area, seek help, someone professional who analyzes your entrepreneurial project and who, according to your objectives, can guide you on the type of company that suits you, based on your resources and future projection.",
+        "title-testimony" : "Testimonials of Entrepreneurs",
+        "testimony-part-1" : "Entrepreneurship is not easy, it requires a lot of time and sacrifice, not all those who start usually reach success, because we can feel very exhausted along the way.",
+        "testimony-part-2" : "What would I have liked to know? That entrepreneurship is very nice as long as you do what you really like, something that you are passionate about; that perseverance is vital for an entrepreneur, that there will be times when that you will feel that everything that could be given was given.",
+        "title-enterprise" : "A growing company",
+        "enterprise" : "Entrepreneurship is not easy, it requires a lot of time and sacrifice, not all those who start are usually successful, because we can feel very exhausted along the way.",
+        "enterprise-list-item-1" : "A good capital is not a guarantee of success",
+        "enterprise-list-item-2" : "Seeking help makes us smarter",
+        "enterprise-list-item-3" : "Know, care for and strengthen your mental health",
+        "title-team" : "Our Team",
+        "team" : "Consisting of a group of professionals specialized in important and integral fields today for any enterprise where we have Technology, Finance, Training and Marketing.",
+        "excellent-services" : "Excellent Services",
+        "grow-market" : "Grow your market",
+        "launch-short-time" : "Launch in a short time",
+        "form-title" : "Do you want to work with us?",
+        "form-description" : "Complete this form and we will contact you within 24 hours.",
+        "full-name" : "Full Name",
+        "email" : "Email",
+        "message" : "Message",
+        "send-email" : "Send"
+    },
+    "login" : {
+        "sign-in-with" : "Sign in with",
+        "sign-in-with-credentials" : "Or sign in with credentials",
+        "email" : "Email",
+        "password" : "Password",
+        "remember-me" : "Remember me",
+        "sign-in" : "Sign in",
+        "forgot-password" : "Forgot your password?",
+        "create-new-account" : "Create a new account"
+    },
+    "register" : {
+        "sign-in-with" : "Sign in with",
+        "sign-in-with-credentials" : "Or sign in with credentials",
+        "name" : "Name",
+        "email" : "Email",
+        "password" : "Password",
+        "agree-with" : "I agree with",
+        "privacy-policy" : "Privacy Policy",
+        "create-account" : "Create Account"
+    },
+    "footer" : {
+        "keep-touch" : "Let's keep in touch!",
+        "keep-touch-description" : "Find us on any of these platforms, we respond within 1-2 business days."
+    }
+}

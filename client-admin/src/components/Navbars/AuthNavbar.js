@@ -1,26 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 // components
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
 import TranslationDropdown from "components/Dropdowns/TranslationDropdown";
 
-// import translations from '../../i18n/index.js';
-// import LanguageContext from "i18n/LanguageContext.js";
-
-// let spanish = 'english';
-// let language = navigator.language || navigator.userLanguage
-// if (!spanish.includes(language)) {
-// 	language = 'español'
-// }
-
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  // const [lng, setLng] = useState(language);
+  const [ translations ] = useTranslation("global");
 
   return (
-    // <LanguageContext.Provider value={lng} >
-      <>
+    <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -28,7 +19,7 @@ export default function Navbar(props) {
                 className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 to="/"
               >
-                Servicios Integrados de Desarrollo Empresarial
+                { translations("navbar.name") }
               </Link>
               <button
                 className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -94,18 +85,11 @@ export default function Navbar(props) {
                 </li>
                 <li className="flex items-center">
                   <TranslationDropdown />
-                  {/* <button onClick={() => setLng('english')}>
-                    {translations[lng]['english']}
-                  </button>
-                  <button onClick={() => setLng('español')}>
-                    {translations[lng]['spanish']}
-                  </button> */}
                 </li>
               </ul>
             </div>
           </div>
         </nav>      
-      </>  
-    // </LanguageContext.Provider>
+      </>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function FooterSmall(props) {
+  const [ translations ] = useTranslation("global");
   return (
     <>
       <footer
@@ -14,18 +16,18 @@ export default function FooterSmall(props) {
           <hr className="mb-6 border-b-1 border-blueGray-600" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4">
-              <div className="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
-                Copyright © {new Date().getFullYear()}{" "}
+              <div className="text-sm text-blueGray-500 font-semibold py-1">
+                Copyright © {new Date().getFullYear()} by{" "}
                 <a
-                  href="https://www.creative-tim.com?ref=nr-footer-small"
-                  className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
+                  href="https://www.linkedin.com/in/servicios-integrados-de-desarrollo-empresarial-side-5b63941b8/"
+                  className="text-blueGray-500 hover:text-blueGray-800"
                 >
-                  Creative Tim
+                  <small>{ translations('navbar.name') }</small>
                 </a>
               </div>
             </div>
             <div className="w-full md:w-8/12 px-4">
-              <ul className="flex flex-wrap list-none md:justify-end  justify-center">
+              {/* <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
                   <a
                     href="https://www.creative-tim.com?ref=nr-footer-small"
@@ -58,7 +60,7 @@ export default function FooterSmall(props) {
                     MIT License
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

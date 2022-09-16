@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
-import translations from "i18n";
+import { useTranslation } from 'react-i18next';
 
 const TranslationDropdown = () => {
   // dropdown props
@@ -17,7 +16,13 @@ const TranslationDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-  // const lng = useContext(LanguageContext)
+
+  const [ translations, i18n ] = useTranslation("global");
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  }
+
   return (    
     <>
       <a
@@ -30,8 +35,6 @@ const TranslationDropdown = () => {
         }}
       >
         <i className="lg:text-blueGray-200 text-blueGray-400 fas fa-globe-americas text-lg leading-lg " />
-        {/* <span className="lg:hidden inline-block ml-2">Linkedin</span> */}
-        {/* {translations[lng]['menu']} */}
       </a>
       <div
         ref={popoverDropdownRef}
@@ -41,14 +44,16 @@ const TranslationDropdown = () => {
         }
       >
         <button 
+            onClick={() => changeLanguage('es')}
             className={ "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700" }
         >
-            { translations['español']['spanish'] }
+            { translations("navbar.spanish")}
         </button>
         <button 
+            onClick={() => changeLanguage('en')}
             className={ "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700" }
         >
-          { translations['español']['english'] }
+          { translations("navbar.english") }
         </button>
       </div>
     </>

@@ -1,5 +1,7 @@
-import React, { useState, useContext } from "react";
-// import { Link } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
+import Swal from 'sweetalert2';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -14,15 +16,6 @@ import data from '../data/team.json';
 import brand from '../assets/img/IMG-20210302-WA0016.jpg';
 import brand1 from '../assets/img/brand-1.jpg';
 import brand2 from '../assets/img/brand-2.jpg';
-
-import translations from '../i18n/index.js';
-// import LanguageContext from '../i18n/LanguageContext.js';
-
-// let spanish = 'english';
-// let language = navigator.language || navigator.userLanguage
-// if (!spanish.includes(language)) {
-// 	language = 'español'
-// }
 
 const responsive = {
   superLargeDesktop: {
@@ -46,13 +39,31 @@ const responsive = {
 
 export default function Landing() {
   
-  const [member] = useState(data);
-  // const lng = useContext(LanguageContext)
-  // console.log(lng)
-  // console.log(language)
+  const form = useRef();  
+  const [ member ] = useState(data);
+  const [ translations ] = useTranslation("global");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_xy36k88', 'template_xg60pj8', form.current, 'HnS0nlwaPZ6CnGpiY')
+      .then((result) => {
+        Swal.fire({
+          title: translations('success'),
+          text: translations('success-message'),
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
+      }, (error) => {
+        Swal.fire({
+          title: translations('success'),
+          text: error.text,
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      });
+  };
 
   return (
-    // <LanguageContext.Consumer>
       <>    
         <Navbar transparent />
           <main>
@@ -71,10 +82,10 @@ export default function Landing() {
                   <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                     <div className="pr-12">
                       <h3 className="text-white font-semibold text-2xl">
-                        { translations['español']['title'] }
+                        { translations('landing.title') }
                       </h3>
                       <p className="mt-4 text-lg text-blueGray-200">
-                        { translations['español']['intro'] }
+                        { translations("landing.intro") }
                       </p>
                     </div>
                   </div>
@@ -108,12 +119,11 @@ export default function Landing() {
                     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                       <div className="px-4 py-5 flex-auto">
                         <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                          <i className="fas fa-award"></i>
+                          <i className="fas fa-bullseye"></i>
                         </div>
-                        <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                        <h6 className="text-xl font-semibold">{ translations('landing.title-mission') }</h6>
                         <p className="mt-2 mb-4 text-blueGray-500">
-                          Acompañar a nuestros clientes en el desarrollo de sus actividades operativas, 
-                          brindándoles las herramientas que le permitan cumplir con los objetivos de la entidad, ofreciendo un servicio profesional de calidad.
+                          { translations('landing.mission') }
                         </p>
                       </div>
                     </div>
@@ -123,11 +133,11 @@ export default function Landing() {
                     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                       <div className="px-4 py-5 flex-auto">
                         <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                          <i className="fas fa-retweet"></i>
+                          <i className="fas fa-thumbs-up"></i>
                         </div>
-                        <h6 className="text-xl font-semibold">Compañia Verificada</h6>
+                        <h6 className="text-xl font-semibold">{ translations('landing.title-committed') }</h6>
                         <p className="mt-2 mb-4 text-blueGray-500">
-                          
+                          { translations('landing.committed') }
                         </p>
                       </div>
                     </div>
@@ -137,12 +147,11 @@ export default function Landing() {
                     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                       <div className="px-4 py-5 flex-auto">
                         <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                          <i className="fas fa-fingerprint"></i>
+                          <i className="fas fa-eye"></i>
                         </div>
-                        <h6 className="text-xl font-semibold">Vision</h6>
+                        <h6 className="text-xl font-semibold">{ translations('landing.title-vision') }</h6>
                         <p className="mt-2 mb-4 text-blueGray-500">
-                          Ser parte de cada etapa y proceso de nuestros clientes, en el camino hacia su
-                          desarrollo, comprometidos con su evolución y crecimiento.
+                        { translations('landing.vision') }
                         </p>
                       </div>
                     </div>
@@ -155,22 +164,14 @@ export default function Landing() {
                       <i className="fas fa-user-friends text-xl"></i>
                     </div>
                     <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                      Trabajar con nosotros es un placer
+                      { translations('landing.title-work-with-us') }
                     </h3>
                     <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                      Don't let your uses guess by attaching tooltips and popoves to
-                      any element. Just make sure you enable them first via
-                      JavaScript.
+                      { translations('landing.work-with-us-part-1') }
                     </p>
-                    <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and you're
-                      good to go. Just make sure you enable them first via
-                      JavaScript.
+                    <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">                    
+                      { translations('landing.work-with-us-part-2') }
                     </p>
-                    {/* <Link to="/" className="font-bold text-blueGray-700 mt-8">
-                      Check Notus React!
-                    </Link> */}
                   </div>
 
                   <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -193,12 +194,13 @@ export default function Landing() {
                           ></polygon>
                         </svg>
                         <h4 className="text-xl font-bold text-white">
-                          Servicios Top Side
+                          { translations('landing.title-testimony') }
                         </h4>
                         <p className="text-md font-light mt-2 text-white">
-                          The Arctic Ocean freezes every winter and much of the
-                          sea-ice then thaws every summer, and that process will
-                          continue whatever happens.
+                          { translations('landing.testimony-part-1') }
+                        </p>
+                        <p className="text-md font-light mt-2 text-white">
+                          { translations('landing.testimony-part-2') }
                         </p>
                       </blockquote>
                     </div>
@@ -242,23 +244,21 @@ export default function Landing() {
                       <div className="text-lightBlue-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-lightBlue-300">
                         <i className="fas fa-rocket text-xl"></i>
                       </div>
-                      <h3 className="text-3xl font-semibold">Una empresa en crecimiento</h3>
-                      <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                        The extension comes with three pre-built pages to help you
-                        get started faster. You can change the text and images and
-                        you're good to go.
+                      <h3 className="text-3xl font-semibold">{ translations('landing.title-enterprise') }</h3>
+                      <p className="mt-4 text-lg leading-relaxed text-blueGray-500">                     
+                        { translations('landing.enterprise') }
                       </p>
                       <ul className="list-none mt-6">
                         <li className="py-2">
                           <div className="flex items-center">
                             <div>
                               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
-                                <i className="fas fa-fingerprint"></i>
+                                <i className="fas fa-money-bill"></i>
                               </span>
                             </div>
                             <div>
                               <h4 className="text-blueGray-500">
-                                Carefully crafted components
+                                { translations('landing.enterprise-list-item-1') }
                               </h4>
                             </div>
                           </div>
@@ -267,12 +267,12 @@ export default function Landing() {
                           <div className="flex items-center">
                             <div>
                               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
-                                <i className="fab fa-html5"></i>
+                                <i className="fas fa-brain"></i>
                               </span>
                             </div>
                             <div>
                               <h4 className="text-blueGray-500">
-                                Amazing page examples
+                                { translations('landing.enterprise-list-item-2') }
                               </h4>
                             </div>
                           </div>
@@ -281,12 +281,12 @@ export default function Landing() {
                           <div className="flex items-center">
                             <div>
                               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
-                                <i className="far fa-paper-plane"></i>
+                                <i className="fas fa-heartbeat"></i>
                               </span>
                             </div>
                             <div>
                               <h4 className="text-blueGray-500">
-                                Dynamic components
+                                { translations('landing.enterprise-list-item-3') }
                               </h4>
                             </div>
                           </div>
@@ -302,19 +302,16 @@ export default function Landing() {
               <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-center text-center mb-24">
                   <div className="w-full lg:w-6/12 px-4">
-                    <h2 className="text-4xl font-semibold">Nuestro Equipo</h2>
+                    <h2 className="text-4xl font-semibold">{ translations('landing.title-team') }</h2>
                     <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                      According to the National Oceanic and Atmospheric
-                      Administration, Ted, Scambos, NSIDClead scentist, puts the
-                      potentially record maximum.
+                     { translations('landing.team') }
                     </p>
                   </div>
                 </div>
                 <Carousel
-                    ssr={true} // means to render carousel on server-side.
+                    ssr={true}
                     infinite={true}
-                    // autoPlay={true}
-                    // autoPlaySpeed={1000}
+                    autoPlay={true}
                     itemClass="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4"
                     responsive={responsive}
                   >
@@ -326,7 +323,6 @@ export default function Landing() {
                             <div className="px-6">
                               <img
                                 alt="..."
-                                // eslint-disable-next-line no-useless-concat
                                 src={require('../assets/team/' + member.image)}
                                 className="shadow-lg rounded mx-auto max-w-120-px"
                               />
@@ -388,129 +384,110 @@ export default function Landing() {
               </div>
 
               <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
-                <div className="flex flex-wrap text-center justify-center">
-                  <div className="w-full lg:w-6/12 px-4">
-                    <h2 className="text-4xl font-semibold text-white">
-                      Build something
-                    </h2>
-                    <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
-                      Put the potentially record low maximum sea ice extent tihs
-                      year down to low ice. According to the National Oceanic and
-                      Atmospheric Administration, Ted, Scambos.
-                    </p>
-                  </div>
-                </div>
                 <div className="flex flex-wrap mt-12 justify-center">
                   <div className="w-full lg:w-3/12 px-4 text-center">
                     <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                       <i className="fas fa-medal text-xl"></i>
                     </div>
                     <h6 className="text-xl mt-5 font-semibold text-white">
-                      Excelentes Servicios
+                      { translations('landing.excellent-services') }
                     </h6>
-                    <p className="mt-2 mb-4 text-blueGray-400">
-                      Some quick example text to build on the card title and make up
-                      the bulk of the card's content.
-                    </p>
                   </div>
                   <div className="w-full lg:w-3/12 px-4 text-center">
                     <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                       <i className="fas fa-poll text-xl"></i>
                     </div>
                     <h5 className="text-xl mt-5 font-semibold text-white">
-                      Haga crecer su mercado
+                      { translations('landing.grow-market') }
                     </h5>
-                    <p className="mt-2 mb-4 text-blueGray-400">
-                      Some quick example text to build on the card title and make up
-                      the bulk of the card's content.
-                    </p>
                   </div>
                   <div className="w-full lg:w-3/12 px-4 text-center">
                     <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                       <i className="fas fa-lightbulb text-xl"></i>
                     </div>
                     <h5 className="text-xl mt-5 font-semibold text-white">
-                      Launch time
+                      { translations('landing.launch-short-time') }
                     </h5>
-                    <p className="mt-2 mb-4 text-blueGray-400">
-                      Some quick example text to build on the card title and make up
-                      the bulk of the card's content.
-                    </p>
                   </div>
                 </div>
               </div>
             </section>
             <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-              <div className="container mx-auto px-4">
-                <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-                  <div className="w-full lg:w-6/12 px-4">
-                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
-                      <div className="flex-auto p-5 lg:p-10">
-                        <h4 className="text-2xl font-semibold">                    
-                          ¿Quieres trabajar con nosotros?
-                        </h4>
-                        <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">                  
-                          Complete este formulario y estaremos en contacto con usted en 24 horas.
-                        </p>
-                        <div className="relative w-full mb-3 mt-8">
-                          <label
-                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlFor="full-name"
-                          >
-                            Nombre Completo
-                          </label>
-                          <input
-                            type="text"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            placeholder="Nombre Completo"
-                          />
-                        </div>
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="container mx-auto px-4">
+                  <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+                    <div className="w-full lg:w-6/12 px-4">
+                      <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+                        <div className="flex-auto p-5 lg:p-10">
+                          <h4 className="text-2xl font-semibold">                    
+                            { translations('landing.form-title') }
+                          </h4>
+                          <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">                  
+                            <small>{ translations('landing.form-description') }</small>
+                          </p>
+                          <div className="relative w-full mb-3 mt-8">
+                            <label
+                              className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="full-name"
+                            >
+                              { translations('landing.full-name') }
+                            </label>
+                            <input
+                              name="user_name"
+                              type="text"
+                              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              placeholder={ translations('landing.full-name') }
+                            />
+                          </div>
 
-                        <div className="relative w-full mb-3">
-                          <label
-                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlFor="email"
-                          >
-                            Email
-                          </label>
-                          <input
-                            type="email"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            placeholder="Email"
-                          />
-                        </div>
+                          <div className="relative w-full mb-3">
+                            <label
+                              className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="email"
+                            >
+                              { translations('landing.email') }
+                            </label>
+                            <input
+                              name="user_email"
+                              type="email"
+                              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              placeholder={ translations('landing.email') }
+                            />
+                          </div>
 
-                        <div className="relative w-full mb-3">
-                          <label
-                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlFor="message"
-                          >
-                            Mensaje
-                          </label>
-                          <textarea
-                            rows="4"
-                            cols="80"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                            placeholder="Escriba un mensaje..."
-                          />
-                        </div>
-                        <div className="text-center mt-6">
-                          <button
-                            className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                            type="button"
-                          >
-                            Enviar
-                          </button>
+                          <div className="relative w-full mb-3">
+                            <label
+                              className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="message"
+                            >
+                              { translations('landing.message') }
+                            </label>
+                            <textarea
+                              name="message"
+                              rows="4"
+                              cols="80"
+                              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"                            
+                              placeholder={ translations('landing.message') }
+                            />
+                          </div>
+                          <div className="text-center mt-6">
+                            <button
+                              type="submit" 
+                              value="Send"
+                              className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"    
+                            >
+                              { translations('landing.send-email') }
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </section>
           </main>
         <Footer />
       </>
-    // </LanguageContext.Consumer>
   );
 }

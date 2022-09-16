@@ -1,9 +1,7 @@
-import React, { useContext} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
-
-// import translations from '../../i18n/index.js';
-// import LanguageContext from "i18n/LanguageContext.js";
+import { useTranslation } from 'react-i18next';
 
 const PagesDropdown = () => {
   // dropdown props
@@ -19,7 +17,9 @@ const PagesDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-  // const lng = useContext(LanguageContext)
+
+  const [ translations ] = useTranslation("global");
+
   return (    
     <>
       <a
@@ -31,7 +31,7 @@ const PagesDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        {/* {translations[lng]['menu']} */}
+        { translations('navbar.menu') }
       </a>
       <div
         ref={popoverDropdownRef}
@@ -46,7 +46,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          {/* {translations[lng]['services']} */}
+          { translations('navbar.home') }
         </Link>
         <Link
           to="/"
@@ -54,14 +54,22 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          {/* {translations[lng]['packages']} */}
+          { translations('navbar.services') }
+        </Link>
+        <Link
+          to="/"
+          className={
+            "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+          }
+        >
+          { translations('navbar.packages') }
         </Link>
        <span
           className={
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
           }
         >
-          {/* {translations[lng]['side.app']} */}
+          { translations('navbar.side.app') }
         </span>
         <Link
           to="/auth/login"
@@ -69,7 +77,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          {/* {translations[lng]['login']} */}
+          { translations('navbar.login') }
         </Link>
         <Link
           to="/auth/register"
@@ -77,7 +85,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          {/* {translations[lng]['register']} */}
+          { translations('navbar.register') }
         </Link>
       </div>
     </>
