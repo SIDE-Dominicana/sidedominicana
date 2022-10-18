@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold">{ translations('footer.keep-touch') }</h4>
               <h6 className="text-lg mt-0 mb-2 text-blueGray-600">
-                <small>{ translations('keep-touch-description') }</small>
+                <small>{ translations('footer.keep-touch-description') }</small>
               </h6>
               <div className="mt-6 lg:mb-0 mb-6">
                 <button

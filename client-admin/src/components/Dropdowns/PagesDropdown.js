@@ -49,20 +49,20 @@ const PagesDropdown = () => {
           { translations('navbar.home') }
         </Link>
         <Link
-          to="/"
+          to="/blog"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          { translations('navbar.services') }
+          { translations('navbar.blog') }
         </Link>
         <Link
-          to="/"
+          to="/service"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          { translations('navbar.packages') }
+          { translations('navbar.packages-services') }
         </Link>
        <span
           className={

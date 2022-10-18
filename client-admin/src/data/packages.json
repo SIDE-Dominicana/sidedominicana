@@ -1,0 +1,178 @@
+[
+    {
+        "id" : 1,
+        "title" : "Plan de Concepción",
+        "services" : [
+            {
+                "name" : "Nombre Comercial"
+            },
+            {
+                "name" : "Registro Mercantil"
+            },
+            {
+                "name" : "RNC, Oficina Virtuall"
+            },
+            {
+                "name" : "Tesorería de la Seguridad Social"
+            },
+            {
+                "name" : "Ministerio de Trabajo"
+            },
+            {
+                "name" : "Logo Empresa"
+            },
+            {
+                "name" : "Página Web Básica"
+            }
+        ],
+        "price" : 590
+    },
+    {
+        "id" : 2,
+        "title" : "Plan de Concepción e Identidad Corporativa",
+        "services" : [
+            {
+                "name" : "Nombre Comercial"
+            },
+            {
+                "name" : "Registro Mercantil"
+            },
+            {
+                "name" : "RNC, Oficina Virtuall"
+            },
+            {
+                "name" : "Tesorería de la Seguridad Social"
+            },
+            {
+                "name" : "Ministerio de Trabajo"
+            },
+            {
+                "name" : "Identidad Corporativa"
+            },
+            {
+                "name" : "Logo Empresa"
+            },
+            {
+                "name" : "Página Web Básica"
+            }
+        ],
+        "price" : 790
+    },
+    {
+        "id" : 3,
+        "title" : "Plan de Despliegue, Estandarización y Desarrollo",
+        "services" : [
+            {
+                "name" : "Nombre Comercial"
+            },
+            {
+                "name" : "Registro Mercantil"
+            },
+            {
+                "name" : "RNC, Oficina Virtuall"
+            },
+            {
+                "name" : "Tesorería de la Seguridad Social"
+            },
+            {
+                "name" : "Ministerio de Trabajo"
+            },
+            {
+                "name" : "Identidad Corporativa"
+            },
+            {
+                "name" : "Logo Empresa"
+            },
+            {
+                "name" : "Página Web Básica"
+            },
+            {
+                "name" : "Estudios de mercados para nuevos productos"
+            }
+        ],
+        "price" : 1050
+    },
+    {
+        "id" : 4,
+        "title" : "Plan de Despliegue, Estandarización y Desarrollo 2.0",
+        "services" : [
+            {
+                "name" : "Nombre Comercial"
+            },
+            {
+                "name" : "Registro Mercantil"
+            },
+            {
+                "name" : "RNC, Oficina Virtuall"
+            },
+            {
+                "name" : "Tesorería de la Seguridad Social"
+            },
+            {
+                "name" : "Ministerio de Trabajo"
+            },
+            {
+                "name" : "Identidad Corporativa"
+            },
+            {
+                "name" : "Logo Empresa"
+            },
+            {
+                "name" : "Página Web Básica"
+            },
+            {
+                "name" : "Estudios de mercados para nuevos productos"
+            },
+            {
+                "name" : "Taller Manejo Redes Sociales para Pequeños Negocios"
+            },
+            {
+                "name" : "Taller Introducción a Facebook Ads"
+            }
+        ],
+        "price" : 1250
+    },
+    {
+        "id" : 5,
+        "title" : "Plan de Expansión y Evolución Sostenible",
+        "services" : [
+            {
+                "name" : "Actualización y Monitoreo Contable"
+            },
+            {
+                "name" : "Actualización y Monitoreo Impositivo"
+            },
+            {
+                "name" : "Desarrollo de Aplicaciones / Páginas Web"
+            },
+            {
+                "name" : "Evaluación de Infraestructura Tecnológica"
+            },
+            {
+                "name" : "Estudios de mercados para nuevos productos"
+            },
+            {
+                "name" : "Reclutamiento y Selección de Personal"
+            },
+            {
+                "name" : "Estudio de Mercado para Nuevos Productos o Servicios"
+            },
+            {
+                "name" : "Estudios de mercados para nuevos productos"
+            },
+            {
+                "name" : "Taller Servicio al cliente"
+            },
+            {
+                "name" : "Taller Comunicación Efectiva"
+            },
+            {
+                "name" : "Taller Liderazgo Transformacional"
+            }
+        ],
+        "price" : 1450
+    }
+]
+
+
+

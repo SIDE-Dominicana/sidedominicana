@@ -13,7 +13,6 @@ import Footer from "components/Footers/Footer.js";
 import data from '../data/team.json';
 
 // images
-import brand from '../assets/img/IMG-20210302-WA0016.jpg';
 import brand1 from '../assets/img/brand-1.jpg';
 import brand2 from '../assets/img/brand-2.jpg';
 
@@ -70,7 +69,7 @@ export default function Landing() {
             <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
               <div
                 className="absolute top-0 w-full h-full bg-center bg-cover"
-                style={{ backgroundImage: `url(${brand})`, }}
+                style={{ backgroundImage: `url(${require('../assets/img/IMG-20210302-WA0016.jpg')})`, }}
                 >
                 <span
                   id="blackOverlay"

@@ -9,11 +9,11 @@
     "navbar" : {
         "menu" : "Menu",
         "home" : "Home",
+        "blog" : "Blog",
         "side.app" : "Side App",
         "login" : "Login",
         "register" : "Register",
-        "packages" : "Packages",
-        "services" : "Services",
+        "packages-services" : "Packages & Services",
         "english": "English",
         "spanish": "Spanish",
         "name" : "Integrated Business Development Services"
@@ -49,6 +49,19 @@
         "email" : "Email",
         "message" : "Message",
         "send-email" : "Send"
+    },
+    "package-service" : {
+        "title-package" : "Our packages",
+        "content-package" : "",
+        "title-service" : "Our services",
+        "content-service" : "We offer a full spectrum of services to help organizations run better. From your first steps, to empowering your people to work more effectively.",
+        "service-marketing" : "Marketing",
+        "service-technology" : "Technology",
+        "service-training-recruitment" : "Training & Recruitment",
+        "service-finance" : "Finance",
+        "title-formalize" : "Formalize?",
+        "content-formalize-1" : "To be formalized is to obtain legal identity before the State, to have both commercial and mercantile rights and duties. A company that is legalized is serious when undertaking business, it generates confidence in its clients and security in its workers if they have it.",
+        "content-formalize-2" : "It is to be administered, managed, planned and directed in a serious, responsible manner and in accordance with the demands of the modern business world to guarantee its sustainability and permanence in the market."
     },
     "login" : {
         "sign-in-with" : "Sign in with",

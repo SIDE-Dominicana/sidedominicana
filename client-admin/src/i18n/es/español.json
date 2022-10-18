@@ -9,11 +9,11 @@
     "navbar" : {
         "menu" : "Menú",
         "home" : "Inicio",
+        "blog" : "Blog",
         "side.app" : "Aplicación Side",
         "login" : "Ingresar",
         "register" : "Registrarse",
-        "services" : "Servicios",
-        "packages" : "Paquetes",
+        "packages-services" : "Paquetes & Servicios",
         "english": "Inglés",
         "spanish": "Español",
         "name" : "Servicios Integrados de Desarrollo Empresarial"
@@ -49,6 +49,19 @@
         "email" : "Correo Electrónico",
         "message" : "Mensaje",
         "send-email" : "Enviar"        
+    },
+    "package-service" : {
+        "title-package" : "Nuestros Paquetes",
+        "content-package" : "",
+        "title-service" : "Nuestros servicios",
+        "content-service" : "Ofrecemos una gama completa de servicios para ayudar a las organizaciones a funcionar mejor. Desde sus primeros pasos, hasta capacitar a su gente para trabajar de manera más efectiva.",
+        "service-marketing" : "Mercadeo",
+        "service-technology" : "Tecnología",
+        "service-training-recruitment" : "Capacitación y Reclutamiento",
+        "service-finance" : "Finanzas",
+        "title-formalize" : "¿Formalizar?",
+        "content-formalize-1" : "Formalizarse es conseguir identidad jurídica ante el Estado, para contar con derechos y con deberes tanto comerciales como mercantiles. Una empresa que se legaliza tiene seriedad al momento de emprender en los negocios, genera confianza a sus clientes y seguridad a sus trabajadores en caso de tenerlo.",
+        "content-formalize-2" : "Es administrarse, gestionarse, planearse y dirigirse de una manera seria, responsable y acorde con las exigencias del mundo empresarial moderno para garantizar su sostenibilidad y permanencia en el mercado."
     },
     "login" : {
         "sign-in-with" : "Ingresar con",

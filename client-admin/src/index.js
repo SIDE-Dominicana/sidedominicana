@@ -13,11 +13,14 @@ import Auth from "layouts/Auth.js";
 // views without layouts
 
 import Landing from "views/Landing.js";
+import Services from 'views/Services.js';
 
 // translations
 
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
+
+// JSON data for translations
 
 import english from '../src/i18n/en/english.json';
 import español from '../src/i18n/es/español.json';
@@ -43,6 +46,7 @@ ReactDOM.render(
         <Route path="/admin" component={Admin} />
         <Route path="/auth" component={Auth} />
         {/* add routes without layouts */}
+        <Route path="/service" exact component={Services} />
         <Route path="/" exact component={Landing} />
         {/* add redirect for first page */}
         <Redirect from="*" to="/" />
