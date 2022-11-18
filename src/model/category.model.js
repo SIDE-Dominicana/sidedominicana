@@ -6,7 +6,7 @@ function model(sequelize) {
          name: { type: DataTypes.STRING, allowNull: false },
          description: { type: DataTypes.STRING, allowNull: false },
          creationDate: { type: DataTypes.DATE, allowNull: false },
-        UpdateDate: { type: DataTypes.DATE, allowNull: false },
+         updateDate: { type: DataTypes.DATE, allowNull: false },
          status: { type: DataTypes.BOOLEAN, allowNull: false }
     };
 
