@@ -1,5 +1,9 @@
 const { DataTypes } = require('sequelize');
-
+/*
+Type of users.
+- Clientes.
+- Socios.
+*/
 function model(sequelize) {
     const attributes = {
         usersId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
