@@ -60,8 +60,8 @@ exports.update = async function(req, res) {
 
     }
 }
-
-exports.delete = async function(req, res) {
+/*Evaluar la inactividad ya que no se si seria viable borrar ya un suscriptor con cuentas de otros servidores.s */
+exports.delete = async function(req, res) { 
     try {
 
         const subscriber = await service._delete(req.params.id);
