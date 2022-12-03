@@ -26,8 +26,8 @@ export default function FooterSmall(props) {
                 </a>
               </div>
             </div>
-            <div className="w-full md:w-8/12 px-4">
-              {/* <ul className="flex flex-wrap list-none md:justify-end  justify-center">
+            {/* <div className="w-full md:w-8/12 px-4">
+              <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
                   <a
                     href="https://www.creative-tim.com?ref=nr-footer-small"
@@ -60,8 +60,8 @@ export default function FooterSmall(props) {
                     MIT License
                   </a>
                 </li>
-              </ul> */}
-            </div>
+              </ul>
+            </div> */}
           </div>
         </div>
       </footer>

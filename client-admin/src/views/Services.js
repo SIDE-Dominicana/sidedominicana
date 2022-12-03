@@ -39,7 +39,7 @@ export default function Services() {
                 }                
               </PricingTable>   
           </div>
-        </section>
+      </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
         <div className="mt-48 md:mt-40 justify-center text-center flex flex-wrap mt-24">
