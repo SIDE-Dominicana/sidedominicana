@@ -42,8 +42,24 @@ let Subscribers = db.subscribers = require("../model/subscribers.model")(sequeli
     Providers = db.providers = require("../model/providers.model")(sequelize, Sequelize),
     Inventories = db.inventories = require("../model/inventories.model")(sequelize, Sequelize),
     Invoices = db.invoices = require("../model/invoices.model")(sequelize, Sequelize);
-
-/* Creation of relationships between models */
+    Budget = db.budget = require("../model/budget.model")(sequelize, Sequelize);
+    Category = db.category = require("../model/category.model")(sequelize, Sequelize);
+    Color = db.color = require("../model/colors.model")(sequelize, Sequelize);
+    Currency  = db.currency = require("../model/currency.model")(sequelize, Sequelize);
+    Dashboard  = db.dashboard = require ("../model/dashboard.model")(sequelize, Sequelize);
+    Dictionary = db.dictionary = require("../model/dictionary.model")(sequelize, Sequelize);
+    Emails = db.emails = require("../model/emails.model")(sequelize, Sequelize);
+    Inventories = db.inventories = require("../model/inventories.model")(sequelize, Sequelize);
+    Masteroffers = db.masteroffers = require("../model/masteroffers.model")(sequelize, Sequelize);
+    Notificationapp = db.notificacionapp = require("../model/notificationapp.model")(sequelize, Sequelize);
+    Notificacinlog = db.notificacinlog = require("../model/notificationlog.model")(sequelize, Sequelize);
+    Offertespecial = db.offertespecial = require("../model/offertespecial.model")(sequelize, Sequelize);
+    Orders = db.orders = require("../model/orders.model")(sequelize, Sequelize);
+    Products = db.products = require("../model/products.model")(sequelize, Sequelize);
+    Subcategory = db.subcategory = require ("../model/subcategory.model")(sequelize, Sequelize);
+    
+    
+    /* Creation of relationships between models */
 
 /************************************************ Systems database relationships ************************************************/
 Systems.hasMany(Subscribers, { foreignKey: 'systemId' });
