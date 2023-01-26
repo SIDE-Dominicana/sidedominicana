@@ -5,7 +5,7 @@ function model(sequelize) {
         notificationyId: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true }
     };
 
-    return sequelize.define('Notification', attributes);
+    return sequelize.define('Notificationapp', attributes);
 }
 
 module.exports = model;
