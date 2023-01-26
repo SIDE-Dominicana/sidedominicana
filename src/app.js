@@ -23,6 +23,7 @@ app.use(bodyparser.json());
 // Routes - Endpoints
 app.use('/api/auth', require('./routes/auth.route')); // authentication management routes
 app.use('/api/subscribers', require('./routes/subscribers.route')); // users management routess
+app.use('/api/blog', require('./routes/blog.route')); //blog management routes
 
 // When invalid routes are entered
 app.use(async (req, res) => {

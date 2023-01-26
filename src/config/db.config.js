@@ -41,7 +41,9 @@ let Subscribers = db.subscribers = require("../model/subscribers.model")(sequeli
     Customers = db.customers = require("../model/customers.model")(sequelize, Sequelize),
     Providers = db.providers = require("../model/providers.model")(sequelize, Sequelize),
     Inventories = db.inventories = require("../model/inventories.model")(sequelize, Sequelize),
-    Invoices = db.invoices = require("../model/invoices.model")(sequelize, Sequelize);
+    Invoices = db.invoices = require("../model/invoices.model")(sequelize, Sequelize),
+    
+    Blog = db.blog = require("../model/blog.model")(sequelize, Sequelize);
 
 /* Creation of relationships between models */
 
