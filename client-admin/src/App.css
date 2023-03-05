@@ -13,6 +13,11 @@
   }
 }
 
+.bg-blue-side {
+  background-color: #37384c;
+  --tw-bg-opacity: 1;
+}
+
 .App-header {
   background-color: #37384c;
   min-height: 100vh;

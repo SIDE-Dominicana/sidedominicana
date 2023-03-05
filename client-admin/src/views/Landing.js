@@ -73,10 +73,10 @@ export default function Landing() {
                 >
                 <span
                   id="blackOverlay"
-                  className="w-full h-full absolute opacity-75 bg-black"
+                  className="w-full h-full absolute opacity-75 bg-blue-side"
                 ></span>
               </div>
-              <div className="container relative mx-auto">
+              <div className="container relative mt-6">
                 <div className="items-center flex flex-wrap">
                   <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                     <div className="pr-12">

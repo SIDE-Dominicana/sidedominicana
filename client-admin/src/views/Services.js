@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
+import Pricing2 from "components/Sections/ECommerce/Pricing/Pricing2.js";
+
+import pricing2 from "_texts/e-commerce/pricing/pricing2.js";
 
 // components
 import IndexNavbar from "components/Navbars/IndexNavbar";
@@ -25,7 +28,8 @@ export default function Services() {
                   { translations('package-service.content-package') }
                 </p>
               </div>
-              <PricingTable highlightColor="#0d3f5c">
+              <Pricing2 {...pricing2} />
+              {/* <PricingTable highlightColor="#0d3f5c">
                 {
                   packages.map((item, index) => (
                     <PricingSlot  buttonText="Solicitar" title={item.title} priceText={"$" + item.price}>
@@ -37,7 +41,7 @@ export default function Services() {
                     </PricingSlot>
                   ))
                 }                
-              </PricingTable>   
+              </PricingTable>    */}
           </div>
       </section>
 
