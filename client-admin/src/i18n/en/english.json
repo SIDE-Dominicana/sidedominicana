@@ -9,6 +9,7 @@
     "navbar" : {
         "menu" : "Menu",
         "home" : "Home",
+        "blog" : "Blog",
         "packages-services" : "Packages & Services",
         "english": "English",
         "spanish": "Spanish",
