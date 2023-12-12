@@ -9,10 +9,6 @@
     "navbar" : {
         "menu" : "Menu",
         "home" : "Home",
-        "blog" : "Blog",
-        "side.app" : "Side App",
-        "login" : "Login",
-        "register" : "Register",
         "packages-services" : "Packages & Services",
         "english": "English",
         "spanish": "Spanish",
