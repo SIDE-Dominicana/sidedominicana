@@ -25,6 +25,7 @@ export default function Blog() {
 
   return (
     <>
+      {/* <IndexNavbar transparent /> */}
       <NavbarLinks {...navbarlinkslanding2} />
       <HeaderImageTitleButtons {...headerimagetitlebuttons} />
       <Blogs3 {...blogs3} />
