@@ -3,9 +3,9 @@ import cardproductplain from "_texts/e-commerce/cards/cardproductplain.js";
 const textProps = {
   heading2badge: {
     badge: { color: "light", children: "Have you seen us?" },
-    title: "Some of Our Pricing Plans",
+    title: "Paquetes SIDE",
     description:
-      "The time is now for it to be okay to be great. People in this world shun people for being great.",
+      ".",
     alignment: "left",
   },
   button: {

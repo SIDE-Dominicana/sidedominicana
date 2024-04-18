@@ -1,7 +1,7 @@
 const textProps = {
   heading3badge: {
     badge: { color: "red", children: "Have you seen us?" },
-    title: "The latest accessories",
+    title: "Paquetes ",
     description:
       "The time is now for it to be okay to be great. People in this world shun people for being great.",
     alignment: "left",

@@ -1,20 +1,37 @@
 const textProps = {
-  title: "Freelancer Package",
-  description: "Lifetime Access",
-  price: "$249",
+  title: "Constitución, Formalización, Presencia Digital",
+  description: "Plan de Concepción",
+  price: " US$590",
   list: [
     {
       icon: "fas fa-folder-open",
-      text: "Complete documentation",
+      text: "Nombre Comercial",
     },
     {
       icon: "fab fa-sketch",
-      text: "Working materials in Sketch",
+      text: "Registro Mercantil",
     },
     {
       icon: "fas fa-archive",
-      text: "Unlimited cloud storage",
+      text: "RNC, Oficina Virtual",
     },
+
+    {
+      icon: "fas fa-archive",
+      text: "Ministerio de Trabajo",
+    },
+
+    {
+      icon: "fas fa-archive",
+      text: "Ministerio de Trabajo",
+    },
+    
+    {
+      icon: "fas fa-archive",
+      text: "Página Web Básica ",
+    },
+    
+  
   ],
   button: {
     color: "red",
