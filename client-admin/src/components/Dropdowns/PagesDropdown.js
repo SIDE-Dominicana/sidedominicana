@@ -57,14 +57,7 @@ const PagesDropdown = () => {
           >
             {translations("navbar.home")}
           </Link>
-          <Link
-            to="/blog"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          >
-            {translations("navbar.blog")}
-          </Link>
+          
           <Link
             to="/service"
             className={
