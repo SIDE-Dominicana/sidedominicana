@@ -42,4 +42,6 @@ const textProps = {
     children: "More details...",
   },
 };
+
+
 export default textProps;
