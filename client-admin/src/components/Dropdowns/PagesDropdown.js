@@ -57,14 +57,7 @@ const PagesDropdown = () => {
           >
             {translations("navbar.home")}
           </Link>
-          <Link
-            to="/blog"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          >
-            {translations("navbar.blog")}
-          </Link>
+          
           <Link
             to="/service"
             className={
@@ -73,29 +66,7 @@ const PagesDropdown = () => {
           >
             {translations("navbar.packages-services")}
           </Link>
-          <span
-            className={
-              "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
-            }
-          >
-            {translations("navbar.side.app")}
-          </span>
-          <Link
-            to="/auth/login"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          >
-            {translations("navbar.login")}
-          </Link>
-          <Link
-            to="/auth/register"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          >
-            {translations("navbar.register")}
-          </Link>
+        
         </div>
       </div>
     </>
