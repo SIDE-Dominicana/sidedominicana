@@ -4,7 +4,6 @@
   "description": "Proyecto Side Dominicana",
   "main": "index.js",
   "scripts": {
-    "build": "react-scripts build",
     "client-admin": "npm start --prefix client-admin",
     "server-dev": "nodemon index.js",
     "dev": "set NODE_ENV=development && concurrently \"npm run server-dev\" \"npm run client-admin\"",
