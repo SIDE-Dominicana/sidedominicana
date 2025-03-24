@@ -5,14 +5,17 @@ const bodyparser = require('body-parser');
 
 const app = express();
 
+// Serve React build
+app.use(express.static("client-admin/build"));
+
 // Accessible to any
 app.use(cors());
 
 // Database synchronization
-db.sequelize.sync().then(() => {
-    console.log("Database Synced Successfully");
-    // initial();
-});
+// db.sequelize.sync().then(() => {
+//     console.log("Database Synced Successfully");
+//     // initial();
+// });
 
 // Body Parser middleware to handle raw JSON files
 app.use(express.json());

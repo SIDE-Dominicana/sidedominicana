@@ -1,29 +1,26 @@
-# Use a Node.js base image
-FROM node:14
+# Use a stable Node.js version
+FROM node:20
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the package.json and package-lock.json
+# Copy package files and install dependencies
 COPY package*.json ./
+RUN npm install --production
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the code
+# Copy the application source code
 COPY . .
 
-WORKDIR /app/client
-
-# Copy the entire client-admin folder, including public/
-COPY client-admin . 
-
-# Install dependencies
+# Build the React client
+WORKDIR /app/client-admin
 RUN npm install
-
-# Build the React app
 RUN npm run build
 
-# Start the Node.js server
-WORKDIR /app
-CMD [ "npm", "run", "client-admin" ]
+# Install a lightweight HTTP server
+RUN npm install -g serve
+
+# Serve the React app on port 80
+CMD ["serve", "-s", "build", "-l", "80"]
+
+# Expose port 80
+EXPOSE 80

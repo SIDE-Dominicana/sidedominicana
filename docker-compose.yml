@@ -1,4 +1,4 @@
-version: '3.8'
+version: '2.0'
 
 services:
   postgres:
@@ -15,7 +15,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
-    image: 251020/sidedominicana:latest  # Replace with your actual image
+    image: sidedominicana:1.0  # Replace with your actual image
     container_name: my_app
     restart: always
     depends_on:
@@ -23,7 +23,8 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:sidedominicana@postgres_db:5432/postgres
     ports:
-      - "3000:3000"  # Adjust the port based on your application
+      - "80:80"
+      - "443:443"  # Adjust the port based on your application
     volumes:
       - ./app:/usr/src/app  # Mount local `app` directory into the container
 
