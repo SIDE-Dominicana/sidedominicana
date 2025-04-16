@@ -8,7 +8,7 @@ dotenv.config({
 module.exports = {
     NODE_ENV : process.env.NODE_ENV || 'development',
     HOST : process.env.HOST || 'localhost',
-    PORT : process.env.PORT || 80,
+    PORT : process.env.PORT || 443,
     DATABASE_PORT : process.env.DATABASE_PORT || 5432,
     USER: process.env.USER || 'postgres',
     PASSWORD: process.env.PASSWORD || 'cris1234',

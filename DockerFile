@@ -1,26 +1,19 @@
-# Use a stable Node.js version
-FROM node:20
+# Use official Node.js LTS image
+FROM node:18
 
-# Set the working directory
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
 # Copy package files and install dependencies
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 
-# Copy the application source code
+# Copy the entire app source (including certs, src, client-admin if needed)
 COPY . .
 
-# Build the React client
-WORKDIR /app/client-admin
-RUN npm install
-RUN npm run build
-
-# Install a lightweight HTTP server
-RUN npm install -g serve
-
-# Serve the React app on port 80
-CMD ["serve", "-s", "build", "-l", "80"]
-
-# Expose port 80
+# Expose HTTPS and HTTP ports
+EXPOSE 443
 EXPOSE 80
+
+# Run the application using index.js as the entry point
+CMD ["node", "index.js"]
