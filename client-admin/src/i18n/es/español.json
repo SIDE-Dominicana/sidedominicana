@@ -1,87 +1,90 @@
 {
     "message": {
-        "success-message" : "Send",
-        "error-message" : "",
-        "success" : "Successfully",
-        "error" : "Error",
-        "info" : "Information"
+        "success-message": "Send",
+        "error-message": "",
+        "success": "Successfully",
+        "error": "Error",
+        "info": "Information"
     },
-    "navbar" : {
-        "menu" : "Menú",
-        "home" : "Inicio",
-        "blog" : "Blog",
-         "packages-services" : "Paquetes & Servicios",
+    "navbar": {
+        "menu": "Menú",
+        "home": "Inicio",
+        "blog": "Blog",
+        "packages": "Paquetes",
+        "services": "Servicios",
+        "about-us": "Quiénes Somos",
         "english": "Inglés",
         "spanish": "Español",
-        "name" : "Servicios Integrados de Desarrollo Empresarial"
+        "name": "Servicios Integrados de Desarrollo Empresarial"
     },
-    "landing" : {        
-        "title" : "Tu historia comienza con nosotros.",
-        "intro" : "Somos un equipo de profesionales, con experiencia en áreas diversas, que forma un amplio directorio de servicios con el propósito de acompañar a Emprendedores y MiPymes en el desarrollo de los objetivos de su negocio; fortaleciendo cada proceso con las más óptimas soluciones en aspectos Administrativos, Financieros, Tecnológicos y Jurídicos.",        
-        "title-mission" : "Misión",
-        "mission" : "Acompañar a nuestros clientes en el desarrollo de sus actividades operativas, brindándoles las herramientas que le permitan cumplir con los objetivos de la entidad, ofreciendo un servicio profesional de calidad.",
+    "landing": {
+        "title": "Tu historia comienza con nosotros.",
+        "intro": "Somos un equipo de profesionales, con experiencia en áreas diversas, que forma un amplio directorio de servicios con el propósito de acompañar a Emprendedores y MiPymes en el desarrollo de los objetivos de su negocio; fortaleciendo cada proceso con las más óptimas soluciones en aspectos Administrativos, Financieros, Tecnológicos y Jurídicos.",
+        "title-mission": "Misión",
+        "mission": "Acompañar a nuestros clientes en el desarrollo de sus actividades operativas, brindándoles las herramientas que le permitan cumplir con los objetivos de la entidad, ofreciendo un servicio profesional de calidad.",
         "title-committed": "Valores",
         "committed": "Compromiso, Respeto ,Fiabilidad , Integridad , Responsabilidad ",
-        "title-vision" : "Visión",
-        "vision" : "Ser parte de cada etapa y proceso de nuestros clientes, en el camino hacia su desarrollo, comprometidos con su evolución y crecimiento.",
-        "title-work-with-us" : "Trabajar con nosotros es un placer",
-        "work-with-us-part-1" : "Para MiPYMES (Micro, Pequeñas y Medianas Empresas) las sociedades comerciales más recomendadas y utilizadas en el país son las Sociedades de Responsabilidad Limitada y las Empresas Individuales de Responsabilidad Limitada (empresas de único dueño), las cuales poseen requisitos de participación flexibles a la hora de ser constituidas.",
-        "work-with-us-part-2" : "¿Qué debes tener en cuenta al momento de formalizarse como empresa? Si no es tu área, busca ayuda, alguien profesional que analice tu proyecto de emprendimiento y que de acuerdo con tus objetivos pueda orientarte sobre el tipo de compañía que te conviene, partiendo de tus recursos y proyección a futuro.",
-        "title-testimony" : "Testimonios de Emprendedores",
-        "testimony-part-1" : "Emprender no es fácil, amerita de mucho tiempo y sacrificio, no todos los que inician suelen llegan al éxito, porque podemos sentirnos muy agotados en el camino.",
-        "testimony-part-2" : "¿Qué me hubiese gustado saber? Que emprender es muy bonito siempre y cuando haces lo que verdaderamente te gusta, algo que te apasiona; que la constancia es vital para un emprendedor, que habrá momentos en los que sentirás que se dio todo lo que se podía dar.",
-        "title-enterprise" : "Una empresa en crecimiento",
-        "enterprise" : "Emprender no es fácil, amerita de mucho tiempo y sacrificio, no todos los que inician suelen llegan al éxito, porque podemos sentirnos muy agotados en el camino.",
-        "enterprise-list-item-1" : "Un buen capital, no es una garantía de éxito",
-        "enterprise-list-item-2" : "Buscar ayuda nos hace más inteligente",
-        "enterprise-list-item-3" : "Conoce, cuida y fortalece tu salud mental",
-        "title-team" : "Nuestro Equipo",
-        "team" : "Conformado por un conjunto de profesionales especializados en campos importante e integros hoy en dia para todo emprendimiento donde tenemos la Tecnologia, Finanzas, Capacitacion y Mercadeo.",
-        "excellent-services" : "Excelentes Servicios",
-        "grow-market" : "Haga crecer su mercado",
-        "launch-short-time" : "Lanzamiento en poco tiempo",
-        "form-title" : "¿Quieres trabajar con nosotros?",
-        "form-description" : "Complete este formulario y estaremos en contacto con usted en 24 horas.",
-        "full-name" : "Nombre Completo",
-        "email" : "Correo Electrónico",
-        "message" : "Mensaje",
-        "send-email" : "Enviar"        
+        "title-vision": "Visión",
+        "vision": "Ser parte de cada etapa y proceso de nuestros clientes, en el camino hacia su desarrollo, comprometidos con su evolución y crecimiento.",
+        "title-work-with-us": "Trabajar con nosotros es un placer",
+        "work-with-us-part-1": "Para MiPYMES (Micro, Pequeñas y Medianas Empresas) las sociedades comerciales más recomendadas y utilizadas en el país son las Sociedades de Responsabilidad Limitada y las Empresas Individuales de Responsabilidad Limitada (empresas de único dueño), las cuales poseen requisitos de participación flexibles a la hora de ser constituidas.",
+        "work-with-us-part-2": "¿Qué debes tener en cuenta al momento de formalizarse como empresa? Si no es tu área, busca ayuda, alguien profesional que analice tu proyecto de emprendimiento y que de acuerdo con tus objetivos pueda orientarte sobre el tipo de compañía que te conviene, partiendo de tus recursos y proyección a futuro.",
+        "title-testimony": "Testimonios de Emprendedores",
+        "testimony-part-1": "Emprender no es fácil, amerita de mucho tiempo y sacrificio, no todos los que inician suelen llegan al éxito, porque podemos sentirnos muy agotados en el camino.",
+        "testimony-part-2": "¿Qué me hubiese gustado saber? Que emprender es muy bonito siempre y cuando haces lo que verdaderamente te gusta, algo que te apasiona; que la constancia es vital para un emprendedor, que habrá momentos en los que sentirás que se dio todo lo que se podía dar.",
+        "title-enterprise": "Una empresa en crecimiento",
+        "enterprise": "Emprender no es fácil, amerita de mucho tiempo y sacrificio, no todos los que inician suelen llegan al éxito, porque podemos sentirnos muy agotados en el camino.",
+        "enterprise-list-item-1": "Un buen capital, no es una garantía de éxito",
+        "enterprise-list-item-2": "Buscar ayuda nos hace más inteligente",
+        "enterprise-list-item-3": "Conoce, cuida y fortalece tu salud mental",
+        "title-team": "Nuestro Equipo",
+        "team": "Conformado por un conjunto de profesionales especializados en campos importante e integros hoy en dia para todo emprendimiento donde tenemos la Tecnologia, Finanzas, Capacitacion y Mercadeo.",
+        "excellent-services": "Excelentes Servicios",
+        "grow-market": "Haga crecer su mercado",
+        "launch-short-time": "Lanzamiento en poco tiempo",
+        "form-title": "¿Quieres trabajar con nosotros?",
+        "form-description": "Complete este formulario y estaremos en contacto con usted en 24 horas.",
+        "full-name": "Nombre y Apellido",
+        "email": "Correo Electrónico",
+        "message": "Mensaje",
+        "send-email": "Enviar"
     },
-    "package-service" : {
-        "title-package" : "Nuestros Paquetes",
-        "content-package" : "",
-        "title-service" : "Nuestros servicios",
-        "content-service" : "Ofrecemos una gama completa de servicios para ayudar a las organizaciones a funcionar mejor. Desde sus primeros pasos, hasta capacitar a su gente para trabajar de manera más efectiva.",
-        "service-marketing" : "Mercadeo",
-        "service-technology" : "Tecnología",
-        "service-training-recruitment" : "Capacitación y Reclutamiento",
-        "service-finance" : "Finanzas",
-        "title-formalize" : "¿Formalizar?",
-        "content-formalize-1" : "Formalizarse es conseguir identidad jurídica ante el Estado, para contar con derechos y con deberes tanto comerciales como mercantiles. Una empresa que se legaliza tiene seriedad al momento de emprender en los negocios, genera confianza a sus clientes y seguridad a sus trabajadores en caso de tenerlo.",
-        "content-formalize-2" : "Es administrarse, gestionarse, planearse y dirigirse de una manera seria, responsable y acorde con las exigencias del mundo empresarial moderno para garantizar su sostenibilidad y permanencia en el mercado."
+    "package-service": {
+        "title-service": "Nuestros servicios",
+        "content-service": "Ofrecemos una gama completa de servicios para ayudar a las organizaciones a funcionar mejor. Desde sus primeros pasos, hasta capacitar a su gente para trabajar de manera más efectiva.",
+        "service-marketing": "Mercadeo",
+        "service-technology": "Tecnología",
+        "service-training-recruitment": "Capacitación y Reclutamiento",
+        "service-finance": "Finanzas",
+        "title-formalize": "¿Formalizar?",
+        "content-formalize-1": "Formalizarse es conseguir identidad jurídica ante el Estado, para contar con derechos y con deberes tanto comerciales como mercantiles. Una empresa que se legaliza tiene seriedad al momento de emprender en los negocios, genera confianza a sus clientes y seguridad a sus trabajadores en caso de tenerlo.",
+        "content-formalize-2": "Es administrarse, gestionarse, planearse y dirigirse de una manera seria, responsable y acorde con las exigencias del mundo empresarial moderno para garantizar su sostenibilidad y permanencia en el mercado."
     },
-    "login" : {
-        "sign-in-with" : "Ingresar con",
-        "sign-in-with-credentials" : "O ingresar con credenciales",
-        "email" : "Correo Electrónico",
-        "password" : "Contraseña",
-        "remember-me" : "Recuérdame",
-        "sign-in" : "Ingresar",
-        "forgot-password" : "¿Se te olvidó tu contraseña?",
-        "create-new-account" : "Crear una nueva cuenta"
+    "package": {
+        "title-package": "Nuestros Paquetes"
     },
-    "register" : {
-        "sign-in-with" : "Ingresar con",
-        "sign-in-with-credentials" : "O ingresar con credenciales",
-        "name" : "Nombre",
-        "email" : "Correo Electrónico",
-        "password" : "Contraseña",
-        "agree-with" : "Estoy de acuerdo con",
-        "privacy-policy" : "Política de privacidad",
-        "create-account" : "Crear Cuenta"
+    "login": {
+        "sign-in-with": "Ingresar con",
+        "sign-in-with-credentials": "O ingresar con credenciales",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "remember-me": "Recuérdame",
+        "sign-in": "Ingresar",
+        "forgot-password": "¿Se te olvidó tu contraseña?",
+        "create-new-account": "Crear una nueva cuenta"
     },
-    "footer" : {
-        "keep-touch" : "Mantengámonos en contacto!",
-        "keep-touch-description" : "Encuéntranos en cualquiera de estas plataformas, respondemos 1-2 días hábiles."
+    "register": {
+        "sign-in-with": "Ingresar con",
+        "sign-in-with-credentials": "O ingresar con credenciales",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "agree-with": "Estoy de acuerdo con",
+        "privacy-policy": "Política de privacidad",
+        "create-account": "Crear Cuenta"
+    },
+    "footer": {
+        "keep-touch": "Mantengámonos en contacto!",
+        "keep-touch-description": "Encuéntranos en cualquiera de estas plataformas, respondemos 1-2 días hábiles."
     }
 }

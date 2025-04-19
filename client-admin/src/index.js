@@ -12,7 +12,9 @@ import Auth from "layouts/Auth.js";
 // views without layouts
 import Landing from "views/Landing.js";
 import Blog from "views/Blog.js";
+import About from "views/About.js";
 import Services from 'views/Services.js';
+import Packages from 'views/Packages.js';
 
 // translations
 import { I18nextProvider } from 'react-i18next';
@@ -30,7 +32,7 @@ i18next.init({
       global: español
     },
     en: {
-      global: english 
+      global: english
     }
   }
 });
@@ -44,6 +46,8 @@ ReactDOM.render(
         <Route path="/auth" component={Auth} />
         {/* add routes without layouts */}
         <Route path="/service" exact component={Services} />
+        <Route path="/package" exact component={Packages} />
+        <Route path="/about" exact component={About} />
         <Route path="/" exact component={Landing} />
         {/* add redirect for first page */}
         <Redirect from="*" to="/" />

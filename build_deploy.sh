@@ -3,7 +3,7 @@
 # Configuration
 DOCKER_HUB_IMAGE_NAME="251020/sidedominicana"
 IMAGE_NAME="sidedominicana"
-TAG="1.2"
+TAG="1.3"
 
 # Function to ask for user confirmation
 ask_confirmation() {

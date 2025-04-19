@@ -15,7 +15,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
-    image: sidedominicana:1.2
+    image: sidedominicana:1.3
     container_name: my_app
     restart: always
     depends_on:
