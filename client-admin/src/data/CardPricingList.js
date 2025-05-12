@@ -1,8 +1,13 @@
+const phoneNumber = '18098704457';
+const message = 'Hola, quiero realizar una consulta.';
+const encodedMessage = encodeURIComponent(message);
+const cotizar = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
 const cardpricinglist = [
     {
       title: "Constitución y Formalización",
       description: "Plan de Concepción",
-      price: "US$350",
+      price: "",
       list: [
         {
           icon: "fas fa-folder-open",
@@ -28,12 +33,13 @@ const cardpricinglist = [
       button: {
         color: "red",
         children: "Cotizar",
+        href: cotizar
       },
     },
     {
       title: "Constitución e Identidad Corporativa",
       description: "Plan de Concepción e Identidad Corporativa",
-      price: "US$590",
+      price: "",
       list: [
         {
           icon: "fas fa-folder-open",
@@ -63,12 +69,13 @@ const cardpricinglist = [
       button: {
         color: "red",
         children: "Cotizar",
+        href: cotizar
       },
     },
     {
       title: "Despliegue y Desarrollo Empresarial",
       description: "Plan de Despliegue, Estandarización y Desarrollo",
-      price: "US$890",
+      price: "",
       list: [
         {
           icon: "fas fa-folder-open",
@@ -102,6 +109,7 @@ const cardpricinglist = [
       button: {
         color: "red",
         children: "Cotizar",
+        href: cotizar
       }
     },
   ];

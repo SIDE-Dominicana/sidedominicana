@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 // components
+import ScrollMenu from "views/utility/ScrollMenu.js";
+
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
 import TranslationDropdown from "components/Dropdowns/TranslationDropdown";
 
@@ -21,16 +23,16 @@ export default function Navbar(props) {
               className="mx-auto max-w-200-px"
             /> */}
             <Link
-                className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-                to="/"
-              >
-                {/* { translations("navbar.name") } */}
-                <img
-              alt="..."
-              src={require("../../assets/icon/SIDE principal con slogan para fondos scuros.png")}
-              className="mx-auto max-w-200-px"
-            />
-              </Link>
+              className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              to="/"
+            >
+              {/* { translations("navbar.name") } */}
+              <img
+                alt="..."
+                src={require("../../assets/icon/SIDE principal con slogan para fondos scuros.png")}
+                className="mx-auto max-w-200-px"
+              />
+            </Link>
             <button
               className="cursor-pointer h-10 text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -48,7 +50,41 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
-                <PagesDropdown />
+                <a
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="/"
+                  rel="noopener noreferrer"
+                >                  
+                  <span className="inline-block ml-2">Inicio</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="/service"
+                  rel="noopener noreferrer"
+                >                  
+                  <span className="inline-block ml-2">Servicios</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="/package"
+                  rel="noopener noreferrer"
+                >                  
+                  <span className="inline-block ml-2">Paquetes</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="https://wa.me/18098704457?text=Hola, quiero realizar una consulta."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >                  
+                  <span className="inline-block ml-2">Agenda una consulta gratis</span>
+                </a>
               </li>
               <li className="flex items-center">
                 <a

@@ -11,10 +11,13 @@ import Auth from "layouts/Auth.js";
 
 // views without layouts
 import Landing from "views/Landing.js";
-import Blog from "views/Blog.js";
-import About from "views/About.js";
 import Services from 'views/Services.js';
+import Marketing from 'views/Marketing.js';
+import Technology from 'views/Technology.js';
+import TrainingRecruitment from 'views/TrainingRecruitment.js';
+import Finance from 'views/Finance.js';
 import Packages from 'views/Packages.js';
+import BlogDetail from "views/BlogDetail";
 
 // translations
 import { I18nextProvider } from 'react-i18next';
@@ -45,9 +48,13 @@ ReactDOM.render(
         <Route path="/admin" component={Admin} />
         <Route path="/auth" component={Auth} />
         {/* add routes without layouts */}
+        <Route path="/blog/:slug" exact component={BlogDetail} />
         <Route path="/service" exact component={Services} />
+        <Route path="/service/marketing" exact component={Marketing} />
+        <Route path="/service/technology" exact component={Technology} />
+        <Route path="/service/training-recruitment" exact component={TrainingRecruitment} />
+        <Route path="/service/finance" exact component={Finance} />
         <Route path="/package" exact component={Packages} />
-        <Route path="/about" exact component={About} />
         <Route path="/" exact component={Landing} />
         {/* add redirect for first page */}
         <Redirect from="*" to="/" />

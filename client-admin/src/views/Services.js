@@ -1,114 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { PricingTable, PricingSlot, PricingDetail } from 'react-pricing-table';
-import Pricing2 from "components/Sections/ECommerce/Pricing/Pricing2.js";
 import Navbar from "components/Navbars/AuthNavbar.js";
-
-import pricing2 from "_texts/e-commerce/pricing/pricing2.js";
-
-// components
-import IndexNavbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer.js";
-
-// data package information
-import data from '../data/packages.json';
 
 export default function Services() {
   const [translations] = useTranslation("global");
-  const [packages] = React.useState(data);
+
+  const cards = [
+    {
+      title: translations('package-service.service-marketing'),
+      image: require("assets/services/mercadeo-3.jpg"),
+      path: "/service/marketing",
+    },
+    {
+      title: translations('package-service.service-technology'),
+      image: require("assets/services/tecnologia.jpg"),
+      path: "/service/technology",
+    },
+    {
+      title: translations('package-service.service-training-recruitment'),
+      image: require("assets/services/capacitacion_reclutamiento.jpg"),
+      path: "/service/training-recruitment",
+    },
+    {
+      title: translations('package-service.service-finance'),
+      image: require("assets/services/finanzas.jpg"),
+      path: "/service/finance",
+    }
+  ];
 
   return (
     <>
-      {/* <IndexNavbar fixed /> */}
       <Navbar transparent />
       <main>
-        <div className="relative pt-16 pb-16 flex content-center items-center justify-center">
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover bg-blueGray-800">
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-75 bg-blue-side"
-            ></span>
+        {/* BANNER SECTION */}
+        <section className="relative pt-24 pb-28 flex flex-col content-center items-center justify-center min-h-[60vh]">
+          <div className="absolute top-0 w-full h-full bg-center bg-cover bg-blueGray-800">
+            <span className="w-full h-full absolute opacity-75 bg-blue-side"></span>
           </div>
-        </div>
-
-
-        <section className="pt-20 bg-blueGray-300 pb-20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap">
-              <div className="w-full lg:w-3/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
-                  {translations('package-service.service-marketing')}
-                </h5>
-                <Link to="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={require("assets/services/mercadeo-3.jpg")}
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              <div className="w-full lg:w-3/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
-                  {translations('package-service.service-technology')}
-                </h5>
-                <Link to="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={require("assets/services/tecnologia.jpg")}
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              <div className="w-full lg:w-3/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
-                  {translations('package-service.service-training-recruitment')}
-                </h5>
-                <Link to="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={require("assets/services/capacitacion_reclutamiento.jpg")}
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              <div className="w-full lg:w-3/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">
-                  {translations('package-service.service-finance')}
-                </h5>
-                <Link to="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src={require("assets/services/finanzas.jpg")}
-                    />
-                  </div>
-                </Link>
-              </div>
-            </div>
+          <div className="container relative z-10 mt-10 space-y-8 text-center text-white">
           </div>
         </section>
 
-        {/* <section className="block relative z-1 bg-blueGray-600">
-          <div className="container mx-auto">
-            <div className="justify-center flex flex-wrap">
-              <div className="w-full lg:w-12/12">
-            
-              </div>
+        {/* SERVICES SECTION */}
+        <section className="pt-20 bg-blueGray-300 pb-20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center">
+              {cards.map((card, idx) => (
+                <div key={idx} className="w-full sm:w-6/12 lg:w-3/12 px-4 mb-6">
+                  <h5 className="text-xl font-semibold pb-4 text-center">{card.title}</h5>
+                  <Link to={card.path}>
+                    <div className="hover:-mt-4 relative flex flex-col bg-white w-full shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt={card.title}
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={card.image}
+                      />
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
       <Footer />
     </>
