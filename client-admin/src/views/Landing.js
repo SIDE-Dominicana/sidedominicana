@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 import Swal from 'sweetalert2';
 import Carousel from "react-multi-carousel";
@@ -235,9 +236,9 @@ export default function Landing() {
                   <div className="h-full bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition">
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">{post.title}</h3>
                     <p className="text-gray-600 text-sm mb-4">{post.summary}</p>
-                    <a href={`/blog/${post.slug}`} className="inline-block text-white bg-blueGray-800 hover:bg-blueGray-900 py-2 px-4 rounded">
+                    <Link to={`/blog/${post.slug}`} className="inline-block text-white bg-blueGray-800 hover:bg-blueGray-900 py-2 px-4 rounded">
                       Leer más
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

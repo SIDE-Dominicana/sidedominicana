@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "components/Navbars/AuthNavbar";
-import Footer from "components/Footers/Footer";
+import Navbar from "components/Navbars/AuthNavbar.js";
+import Footer from "components/Footers/Footer.js";
 import blogData from "data/blog.json";
 
 export default function BlogDetail() {
@@ -10,6 +10,11 @@ export default function BlogDetail() {
 
     // Related articles: others that are not the current one
     const relatedArticles = blogData.filter((p) => p.slug !== slug).slice(0, 3);
+
+    useEffect(() => {
+        // Scroll to the top when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
 
     if (!article) {
         return (

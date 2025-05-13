@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-// components
-import ScrollMenu from "views/utility/ScrollMenu.js";
-
-import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
 import TranslationDropdown from "components/Dropdowns/TranslationDropdown";
 
 export default function Navbar(props) {
@@ -17,19 +13,13 @@ export default function Navbar(props) {
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mx-auto">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            {/* <img
-              alt="..."
-              src={require("../../assets/icon/SIDE principal con slogan para fondos scuros.png")}
-              className="mx-auto max-w-200-px"
-            /> */}
             <Link
               className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               to="/"
             >
-              {/* { translations("navbar.name") } */}
               <img
                 alt="..."
-                src={require("../../assets/icon/SIDE principal con slogan para fondos scuros.png")}
+                src="/icon/side-principal-slogan-dark.png"
                 className="mx-auto max-w-200-px"
               />
             </Link>
@@ -50,31 +40,28 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
-                <a
+                <Link
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="/"
-                  rel="noopener noreferrer"
+                  to="/"
                 >                  
                   <span className="inline-block ml-2">Inicio</span>
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
-                <a
+                <Link
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="/service"
-                  rel="noopener noreferrer"
+                  to="/service"
                 >                  
                   <span className="inline-block ml-2">Servicios</span>
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
-                <a
+                <Link
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="/package"
-                  rel="noopener noreferrer"
+                  to="/package"
                 >                  
                   <span className="inline-block ml-2">Paquetes</span>
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
                 <a

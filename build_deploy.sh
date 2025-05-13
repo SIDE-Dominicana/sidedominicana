@@ -5,7 +5,7 @@ set -e  # Exit immediately on error
 # Configuration
 DOCKER_HUB_IMAGE_NAME="251020/sidedominicana"
 IMAGE_NAME="sidedominicana"
-TAG="1.3"
+TAG="1.4"
 CLIENT_DIR="client-admin"
 
 # Color functions
@@ -26,26 +26,24 @@ command -v npm >/dev/null 2>&1 || { error "npm not found."; exit 1; }
 command -v docker >/dev/null 2>&1 || { error "docker not found."; exit 1; }
 
 # Build frontend
-info "Moving to $CLIENT_DIR directory..."
-cd "$CLIENT_DIR"
+# info "Moving to $CLIENT_DIR directory..."
+# cd "$CLIENT_DIR"
 
-info "Running client build..."
-npm run build || { error "Client build failed."; exit 1; }
+# info "Running client build..."
+# npm run build || { error "Client build failed."; exit 1; }
 
-cd ..
-success "Client build complete."
+# cd ..
+# success "Client build complete."
+
+# Stop and remove existing container
+info "Stopping and removing containers..."
+docker-compose down || true
+success "Containers removed."
 
 # Build Docker image
 info "Building Docker image: $IMAGE_NAME:$TAG"
 docker build -t "$IMAGE_NAME:$TAG" .
 success "Docker image built successfully."
-
-# Stop and remove existing container
-if ask_confirmation "Stop and remove existing container?"; then
-  info "Stopping and removing containers..."
-  docker-compose down || true
-  success "Containers removed."
-fi
 
 # Start container
 if ask_confirmation "Run new container?"; then

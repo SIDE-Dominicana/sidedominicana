@@ -4,6 +4,7 @@
   "description": "Servicios Integrados de Desarrollo Empresarial",
   "repository": "https://github.com/CrisDaniel25/sidedominicana",
   "license": "MIT",
+  "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-free": "5.15.3",

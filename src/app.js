@@ -2,11 +2,12 @@ const db = require('../src/config/db.config');
 const cors = require('cors');
 const express = require("express");
 const bodyparser = require('body-parser');
+const path = require('path');
 
 const app = express();
 
 // Serve React build
-app.use(express.static("client-admin/build"));
+app.use(express.static(path.join(__dirname, '../client-admin/build')));
 
 // Accessible to any
 app.use(cors());

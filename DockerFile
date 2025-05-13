@@ -1,19 +1,23 @@
-# Use official Node.js LTS image
 FROM node:18
 
-# Create app directory
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
+# Copy backend code and install
 COPY package*.json ./
 RUN npm install
 
-# Copy the entire app source (including certs, src, client-admin if needed)
 COPY . .
 
-# Expose HTTPS and HTTP ports
-EXPOSE 443
-EXPOSE 80
+# Build the React app
+WORKDIR /usr/src/app/client-admin
+RUN npm install
+RUN npm run build
 
-# Run the application using index.js as the entry point
+# Go back to backend root
+WORKDIR /usr/src/app
+
+# Ports
+EXPOSE 80
+EXPOSE 443
+
 CMD ["node", "index.js"]
